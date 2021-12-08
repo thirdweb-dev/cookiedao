@@ -50,7 +50,7 @@ export const Game = ({ setOpen }) => {
           </div>
           :
           <>
-            <h2 className="score">{score} points</h2>
+            <h2 className="score">Score: {score}</h2>
             <h2 className="timer">Time left: {time}s</h2>
           </>
         }

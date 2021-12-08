@@ -168,8 +168,9 @@ button {
   color: black;
   text-align: center;
   position: absolute;
-  top: 30%;
-  left: 35%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .overlay {
@@ -245,5 +246,25 @@ button {
   .claim-card img {
     width: 100%;
     height: 100%;
+  }
+
+  .game-container h2 {
+    font-size: 2rem;
+  }
+
+  .game-container .timer {
+    position: absolute;
+    top: 2rem;
+    left: 0.5rem;
+  }
+
+  .game-container .score {
+    position: absolute;
+    top: 4.5rem;
+    left: 0.5rem;
+  }
+
+  .game-over {
+    width: 75vw;
   }
 }
