@@ -11,7 +11,7 @@ const Landing = () => {
           <button className="btn-black">Connect Wallet</button>
         </div>
       </div>
-      <img src={decoration} alt="Cookie decoration" />
+      <img className="decoration" src={decoration} alt="Cookie decoration" />
     </div>
   );
 };

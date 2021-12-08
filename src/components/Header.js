@@ -1,10 +1,10 @@
-const Header = () => {
+const Header = ({ setScreen }) => {
   return (
     <header>
-      <h2>CookieDAO</h2>
+      <h2 onClick={() => setScreen("landing")}>CookieDAO</h2>
       <nav>
-        <button className="btn-white">Cookie Clicker</button>
-        <button className="btn-black">Claim NFTs</button>
+        <button className="btn-white" onClick={() => setScreen("game")}>Cookie Clicker</button>
+        <button className="btn-black" onClick={() => setScreen("claim")}>Claim NFTs</button>
       </nav>
     </header>
   );
