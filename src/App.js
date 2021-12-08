@@ -1,3 +1,4 @@
+import { ThirdwebWeb3Provider } from "@3rdweb/hooks";
 import { useState } from 'react';
 import './App.css';
 import { LandingScreen } from './components/LandingScreen';
@@ -21,12 +22,27 @@ const App = () => {
     }
   };
 
-  return (
-    <div>
-      <Header setScreen={setScreen} />
-      {screenToShow()}
+  const supportedChainIds = [1, 4, 137];
+  const connectors = {
+    injected: {},
+    walletconnect: {},
+    walletlink: {
+      appName: "thirdweb - demo",
+      url: "https://thirdweb.com",
+      darkMode: false,
+    },
+  };
 
-    </div>
+  return (
+    <ThirdwebWeb3Provider
+      connectors={connectors}
+      supportedChainIds={supportedChainIds}
+    >
+      <div>
+        <Header setScreen={setScreen} />
+        {screenToShow()}
+      </div>
+    </ThirdwebWeb3Provider>
   );
 };
 
