@@ -10,6 +10,7 @@ header {
 
 .landing__text {
   text-align: center;
+  padding: 0 2rem;
 }
 
 .landing__text h1 {
@@ -56,4 +57,30 @@ button {
 .btn-black {
   background-color: #000;
   color: #fff;
+}
+
+@media only screen and (max-width: 600px) {
+  header {
+    margin: 1rem;
+  }
+
+  header nav {
+    margin: auto;
+  }
+
+  header h2 {
+    display: none;
+  }
+
+  .landing__text {
+    margin-top: 15vh;
+  }
+
+  .landing__text h1 {
+    font-size: 3rem;
+  }
+
+  .landing__text h2 {
+    font-size: 1.5rem;
+  }
 }
