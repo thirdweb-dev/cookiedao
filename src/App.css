@@ -1,0 +1,59 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  margin: 2rem 4rem;
+}
+
+.landing {
+  max-height: 100vh;
+}
+
+.landing__text {
+  text-align: center;
+}
+
+.landing__text h1 {
+  font-size: 7rem;
+  margin: 0;
+}
+
+.landing__text h2 {
+  font-size: 2rem;
+  margin: 2rem 0;
+}
+
+.landing__text p {
+  margin-bottom: 2rem;
+}
+
+.landing img {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+
+.landing button {
+  font-size: 1.2rem;
+  padding: 1.2rem 2rem;
+}
+
+button {
+  padding: 1rem 1.5rem;
+  text-transform: uppercase;
+  border-radius: 3rem;
+  border: none;
+  font-weight: bold;
+  font-family: inherit;
+  font-size: 0.9rem;
+}
+
+.btn-white {
+  background-color: #fff;
+  color: #000;
+  margin-right: 0.75rem;
+}
+
+.btn-black {
+  background-color: #000;
+  color: #fff;
+}
