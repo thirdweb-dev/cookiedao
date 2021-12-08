@@ -14,7 +14,7 @@ header h2 {
 
 .landing__text,
 .claim,
-.game {
+.game-screen {
   text-align: center;
   padding: 0 2rem;
 }
@@ -117,7 +117,7 @@ button {
   margin: 0;
 }
 
-.game {
+.game-screen {
   margin-top: 7rem;
 }
 
@@ -134,13 +134,51 @@ button {
   right: 0;
 }
 
+.game-container h2 {
+  font-size: 3rem;
+  margin: 0;
+}
+
+.game-container .timer {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+}
+
+.game-container .score {
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+}
+
+.game-container img {
+  cursor: pointer;
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.game-over {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 1.5rem;
+  border-radius: 2rem;
+  color: black;
+  text-align: center;
+  position: absolute;
+  top: 30%;
+  left: 35%;
+}
+
 .overlay {
   position: fixed;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.75);
 }
 
 @media only screen and (max-width: 600px) {
