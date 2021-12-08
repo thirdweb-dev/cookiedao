@@ -1,6 +1,6 @@
 import decoration from "../assets/decoration.png";
 
-const Landing = () => {
+export const LandingScreen = () => {
   return (
     <div className="landing">
       <div className="landing__text">
@@ -15,5 +15,3 @@ const Landing = () => {
     </div>
   );
 };
-
-export default Landing;

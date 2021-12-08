@@ -125,6 +125,24 @@ button {
   color: #ffc101;
 }
 
+.game-container {
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
 @media only screen and (max-width: 600px) {
   header {
     margin: 1rem;

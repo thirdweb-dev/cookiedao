@@ -1,4 +1,4 @@
-const Header = ({ setScreen }) => {
+export const Header = ({ setScreen }) => {
   return (
     <header>
       <h2 onClick={() => setScreen("landing")}>CookieDAO</h2>
@@ -9,5 +9,3 @@ const Header = ({ setScreen }) => {
     </header>
   );
 };
-
-export default Header;

@@ -1,23 +1,23 @@
 import { useState } from 'react';
 import './App.css';
-import Claim from './components/Claim';
-import Game from './components/Game';
-import Header from './components/Header';
-import Landing from './components/Landing';
+import { LandingScreen } from './components/LandingScreen';
+import { ClaimScreen } from './components/ClaimScreen';
+import { GameScreen } from './components/GameScreen';
+import { Header } from './components/Header';
 
 const App = () => {
-  const [screen, setScreen] = useState("landing");
+  const [screen, setScreen] = useState("game");
 
   const screenToShow = () => {
     switch (screen) {
       case "landing":
-        return <Landing />;
+        return <LandingScreen />;
       case "game":
-        return <Game />;
+        return <GameScreen />;
       case "claim":
-        return <Claim />;
+        return <ClaimScreen />;
       default:
-        return <Landing />;
+        return <LandingScreen />;
     }
   };
 

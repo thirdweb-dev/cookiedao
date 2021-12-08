@@ -2,7 +2,7 @@ import chocolateCookie from "../assets/chocolate-cookie.png";
 import goldenCookie from "../assets/golden-cookie.png";
 import decoration from "../assets/decoration.png";
 
-const Claim = () => {
+export const ClaimScreen = () => {
   return (
     <div className="claim__container">
       <div className="claim">
@@ -30,5 +30,3 @@ const Claim = () => {
     </div>
   );
 };
-
-export default Claim;
