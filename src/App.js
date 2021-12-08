@@ -6,7 +6,7 @@ import { GameScreen } from './components/GameScreen';
 import { Header } from './components/Header';
 
 const App = () => {
-  const [screen, setScreen] = useState("game");
+  const [screen, setScreen] = useState("landing");
 
   const screenToShow = () => {
     switch (screen) {

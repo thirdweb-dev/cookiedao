@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import chocolateCookie from "../assets/chocolate-cookie.png";
 
 export const Game = ({ setOpen }) => {
-  const [time, setTime] = useState(5);
+  const [time, setTime] = useState(30);
   const [gameOver, setGameOver] = useState(false);
   const [cookiePosition, setCookiePosition] = useState({ top: "15%", left: "50%" });
   const [score, setScore] = useState(0);
