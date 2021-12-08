@@ -13,7 +13,8 @@ header h2 {
 }
 
 .landing__text,
-.claim {
+.claim,
+.game {
   text-align: center;
   padding: 0 2rem;
 }
@@ -114,6 +115,14 @@ button {
   font-size: 1.25rem;
   font-weight: 500;
   margin: 0;
+}
+
+.game {
+  margin-top: 7rem;
+}
+
+.color-cookie {
+  color: #ffc101;
 }
 
 @media only screen and (max-width: 600px) {
