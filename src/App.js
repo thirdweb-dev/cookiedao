@@ -10,10 +10,6 @@ const App = () => {
   const sdk = new ThirdwebSDK(signer);
   const dropAddress = "0xc0E6FB30A848f8b5408E4AA6A1415545F4C1e0E4";
 
-  useEffect(() => {
-    getBalance();
-  }, [address]);
-
   const getBalance = async () => {
     try {
       const drop = sdk.getDropModule(dropAddress);
@@ -23,6 +19,11 @@ const App = () => {
       console.error(error);
     }
   };
+
+  useEffect(() => {
+    getBalance();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [address]);
 
   const claimNft = async () => {
     try {
