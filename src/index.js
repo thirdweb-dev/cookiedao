@@ -3,10 +3,27 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { ThirdwebWeb3Provider } from '@3rdweb/hooks';
+
+const supportedChainIds = [1, 4, 137];
+const connectors = {
+  injected: {},
+  walletconnect: {},
+  walletlink: {
+    appName: "CookieDAO",
+    url: "https://cookiedao.vercel.app",
+    darkMode: false,
+  },
+};
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <ThirdwebWeb3Provider
+      connectors={connectors}
+      supportedChainIds={supportedChainIds}
+    >
+      <App />
+    </ThirdwebWeb3Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );
