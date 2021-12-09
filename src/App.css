@@ -5,25 +5,16 @@
   align-items: center;
 }
 
-h1 {
-  font-family: Itim;
-  font-size: 5rem;
-  margin: 0;
-  margin-bottom: 1rem;
-}
-
 .container {
   text-align: center;
   padding: 0 2rem;
 }
 
-.container h2 {
-  font-size: 2rem;
-  margin: 2rem 0;
-}
-
-.container p {
-  margin-bottom: 2rem;
+h1 {
+  font-family: Itim;
+  font-size: 5rem;
+  margin: 0;
+  margin-bottom: 1rem;
 }
 
 button {
