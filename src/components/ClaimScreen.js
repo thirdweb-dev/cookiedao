@@ -7,9 +7,7 @@ import { ThirdwebSDK } from "@3rdweb/sdk";
 
 export const ClaimScreen = () => {
   const { provider } = useWeb3();
-
   const signer = useMemo(() => provider ? provider.getSigner() : null, [provider]);
-
   const sdk = new ThirdwebSDK(signer);
 
   const claimNft = async () => {

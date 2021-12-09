@@ -1,11 +1,19 @@
 import { useEffect, useState } from "react";
 import chocolateCookie from "../assets/chocolate-cookie.png";
+import { useWeb3 } from "@3rdweb/hooks";
+import { useMemo } from "react";
+import { ThirdwebSDK } from "@3rdweb/sdk";
+import { ethers } from "ethers";
 
 export const Game = ({ setOpen }) => {
-  const [time, setTime] = useState(30);
+  const [time, setTime] = useState(5);
   const [gameOver, setGameOver] = useState(false);
   const [cookiePosition, setCookiePosition] = useState({ top: "15%", left: "50%" });
   const [score, setScore] = useState(0);
+
+  const { provider } = useWeb3();
+  const signer = useMemo(() => provider ? provider.getSigner() : null, [provider]);
+  const sdk = new ThirdwebSDK(signer);
 
   useEffect(() => {
     const unsubscribe = setInterval(() => {
@@ -32,9 +40,22 @@ export const Game = ({ setOpen }) => {
     });
   };
 
+  const mintTokens = async () => {
+    try {
+      const token = sdk.getCurrencyModule("0x345a758f3aA20AFe85ae755A9D69565403ed731e");
+      const amount = ethers.utils.parseUnits(`${score}`, 18);
+      await token.mint(amount);
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
   const redeemCookies = () => {
+    mintTokens();
     setOpen(false);
   };
+
+
 
   return (
     <div className="game">
