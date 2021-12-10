@@ -1,10 +1,4 @@
 @font-face {
-  font-family: 'Itim';
-  src: url('./fonts/Itim.ttf') format('ttf');
-  font-display: swap;
-}
-
-@font-face {
   font-family: 'Inter';
   src: url('./fonts/Inter.ttf') format('ttf');
   font-display: swap;

@@ -1,17 +1,32 @@
-.landing {
+.h-full {
   height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
-.container {
+.landing {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
   padding: 0 2rem;
 }
 
+.dao {
+  margin-top: 2rem;
+}
+
+.dao ul {
+  padding-left: 0;
+}
+
+.dao ul li {
+  list-style: none;
+  margin: none;
+  margin: 0.5rem 0;
+}
+
 h1 {
-  font-family: Itim;
   font-size: 5rem;
   margin: 0;
   margin-bottom: 1rem;
