@@ -5,7 +5,6 @@ import { ThirdwebSDK } from "@3rdweb/sdk";
 
 const App = () => {
   const [balance, setBalance] = useState(null);
-  const [daoMembers, setDaoMembers] = useState([]);
   const { address, connectWallet, provider } = useWeb3();
   const signer = useMemo(() => provider?.getSigner(), [provider]);
   const sdk = new ThirdwebSDK(signer);
@@ -21,20 +20,8 @@ const App = () => {
     }
   };
 
-  const checkHolders = async () => {
-    try {
-      const drop = sdk.getDropModule(dropAddress);
-      const allClaimed = await drop.getAllClaimed();
-      const members = allClaimed.map(({ owner }) => ({ address: owner }));
-      setDaoMembers(members);
-    } catch (error) {
-      console.error(error);
-    }
-  };
-
   useEffect(() => {
     getBalance();
-    checkHolders();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [address]);
 
@@ -56,18 +43,6 @@ const App = () => {
           <button onClick={() => window.open("https://discord.gg")}>
             Join the Discord
           </button>
-          <div className="">
-            <h2>DAO Members</h2>
-            <ul>
-              {daoMembers.map(({ address }) => {
-                return (
-                  <li>
-                    {address.slice(0, 6)}...{address.slice(address.length - 6, address.length)}
-                  </li>
-                );
-              })}
-            </ul>
-          </div>
         </div>
       );
     } else if (address) {
